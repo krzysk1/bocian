@@ -1,9 +1,4 @@
 <[file][][]
-//-------------------------------------
-// Plane: SZD-9bis Bocian 1E
-// 3D Design: AJ MacLeod, 12th June 2007
-// Compilation: by krzysk(at)wp.pl
-//-------------------------------------
     <[modelmanager][][]
         <[pointer_list_tmuniverse][DynamicObjects][]
 
