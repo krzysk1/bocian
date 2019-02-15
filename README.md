@@ -13,9 +13,6 @@ Installation
 
 1. Unzip file and move the folder "bocian" to C:\Users\~\Documents\Aerofly FS2\aircraft.
 
-2. Copy all *.tsb files from "swifts1" folder from your aeroflyFS installation path into "bocian" folder.
-
-
 ===========================================================================
 This model of a Bocian-1E / SZD-9 glider is released under the terms of the
 GPLv2.
