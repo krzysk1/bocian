@@ -1,4 +1,12 @@
 <[file][][]
+
+	//-------------------------------------
+	// Plane: SZD-9bis Bocian 1E
+	// 3D Design: AJ MacLeod, 12th June 2007
+	// Compilation: by krzysk(at)wp.pl
+	// Date: Thu Dec 25 2014; 2019
+	//-------------------------------------
+
     <[modelmanager][][]
         <[pointer_list_tmuniverse][DynamicObjects][]
 
@@ -8,7 +16,7 @@
                 <[bool][CompensatedVariometer][true]>
                 <[string8][Airspeed][AirspeedIndicator.IndicatedAirspeed]>
                 <[string8][AirbrakePosition][AirBrakeInput.Output]>
-                <[tmvector3d][LookAtPosition][0.0 0.0 0.4]> // mass: 472.0 ( 0.049 0.000 0.434 )
+                <[tmvector3d][LookAtPosition][0.049 0.000 0.434]>
             >
 			
             // cameras start
@@ -79,7 +87,7 @@
                 <[float64][Dtz][1000.0]>
                 <[string8][Body0][Fuselage]>
                 <[string8][Body1][LeftWing]>
-                <[float64][ForceMax][15000.0]>
+                <[float64][ForceMax][150000.0]>
                 <[float64][TorqueMax][30000.0]>
             >
             <[rigidbody][RightWing][]
@@ -104,7 +112,7 @@
                 <[float64][Dtz][1000.0]>
                 <[string8][Body0][Fuselage]>
                 <[string8][Body1][RightWing]>
-                <[float64][ForceMax][15000.0]>
+                <[float64][ForceMax][150000.0]>
                 <[float64][TorqueMax][30000.0]>
             >
             <[collisionhull][CollisionFuselage][]
@@ -668,7 +676,10 @@
                 <[string8][Input][PitotTube.MachNumber]>
                 <[string8][Message][Aircraft.MachNumber]>
             >
-
+            <[output][SideslipAngle][]
+                <[string8][Input][PitotTube.SideslipAngle]>
+            >
+			
             // temperature
 
             // airspeed
@@ -804,7 +815,10 @@
                 <[string8][Input][HeadingIndicator.MagneticHeading]>
                 <[string8][Message][Aircraft.MagneticHeading]>
             >
-
+            <[output][HeadingAngle][]
+                <[string8][Input][HeadingIndicator.MagneticHeading]>
+            >
+			
             // navigation instruments end
 
         >
@@ -1056,11 +1070,15 @@
                 <[uint32][PositionID][MainGear.R]>
                 <[uint32][OrientationID][MainGear.Q]>
             >
-            <[rotatingbodygraphics][wheel][]
+            <[graphics_wheel][MainWheel][]
                 <[string8][GeometryList][ wheel ]>
                 <[uint32][PositionID][MainGear.R]>
                 <[uint32][OrientationID][MainGear.Q]>
                 <[uint32][AngleID][MainWheelHull.RotationAngle]>
+                <[uint32][GroundID][MainWheelHull.Ground]>
+                <[uint32][DeformationID][MainWheelHull.Deformation]>
+                <[float64][Radius][0.172]>
+                <[float64][RimRadius][0.0813]>				
                 <[tmvector3d][Axis][0.0 1.0 0.0]>
                 <[tmvector3d][Pivot][0.47959 0 -0.341329]> 
             >
@@ -1133,7 +1151,14 @@
             >
             <[graphics_mapping][asi_needleMapping][]
                 <[string8][Input][asi_needleInput.Output]>
-                <[tmvector2d][Map][(0 0.0) (32.4 1.134464) (54 3.054326) (75.6 4.939282) (97.2 6.632251) (108 7.417649) (135 8.988446) (216 11.344640)]>
+                <[tmvector2d][Map][ (0 0.0) 
+									(32.4 1.134464) 
+									(54 3.054326) 
+									(75.6 4.939282) 
+									(97.2 6.632251) 
+									(108 7.417649) 
+									(135 8.988446) 
+									(216 11.344640)]>
             >
             <[hingedbodygraphics][asi_needle][]
                 <[string8][GeometryList][ needle ]>
@@ -1147,11 +1172,10 @@
 			//vsi
             <[graphics_input][vsi_Needle1Input][]
                 <[uint32][InputID][EnergyCompensatedNeedle.Output]>
-                <[float64][Scaling][100.0]>
             >
             <[graphics_mapping][vsi_Needle1Mapping][]
                 <[string8][Input][vsi_Needle1Input.Output]>
-                <[tmvector2d][Map][(-984 -2.268928) (0 0.0) (984 2.268928)]>
+                <[tmvector2d][Map][(-9.84 -2.268928) (0 0.0) (9.84 2.268928)]>
             >
             <[hingedbodygraphics][vsi_Needle1][]
                 <[string8][GeometryList][ vsi-needle1 ]>
@@ -1168,18 +1192,17 @@
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][AngleID][HeadingAngle.Output]>
-                <[tmvector3d][Axis][0.0 0.0 -1.0]>
+                <[tmvector3d][Axis][0.0 0.0 1.0]>
                 <[tmvector3d][Pivot][2.107608 -0.004671 0.384353]> 
             >
 			
 			//vsi2
             <[graphics_input][vsi2_needleInput][]
                 <[uint32][InputID][VerticalSpeed.Output]>
-                <[float64][Scaling][100.0]>
             >
             <[graphics_mapping][vsi2_needleMapping][]
                 <[string8][Input][vsi2_needleInput.Output]>
-                <[tmvector2d][Map][(-5905.5 -2.181662) (-1968.5 -1.396263) (-984.25 -0.907571) (0 0.0) (984.25 0.959931) (1968.5 1.518436) (5905.5 2.356194)]>
+                <[tmvector2d][Map][(-59.055 -2.181662) (-19.685 -1.396263) (-9.8425 -0.907571) (0 0.0) (9.8425 0.959931) (19.685 1.518436) (59.055 2.356194)]>
             >
             <[hingedbodygraphics][vsi2_needle][]
                 <[string8][GeometryList][ vsi2_needle ]>

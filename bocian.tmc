@@ -3,7 +3,8 @@
         <[int][Version][210]> 
         <[vec32array][ContactSpheres][ (0.4796 0.0 -0.3413 0.172) (-4.32 0.0 0.0 0.034) (0.32 -9.23 1.14 0.034) (0.32 9.23 1.14 0.034) ]>
         <[string8][DisplayName][SZD-9 Bocian]>
-        <[string8][DescriptionTextEN][The SZD-9 Bocian (Polish: "Stork") is a multi-purpose two-seat sailplane that was designed and built in Poland at Szybowcowy Zakład Doświadczalny (Glider Experimental Works) in Bielsko-Biała, beginning in 1952. It was designed to be capable of fulfilling the needs of every area from training to competition flying.#Converted from FlightGear by krzysk(at)wp.pl, 3D model by AJ MacLeod.]>
+        <[string8][DescriptionTextEN][The SZD-9 Bocian (Polish: "Stork") is a multi-purpose two-seat sailplane that was designed and built in Poland at Szybowcowy Zakład Doświadczalny (Glider Experimental Works) in Bielsko-Biała, beginning in 1952. It was designed to be capable of fulfilling the needs of every area from training to competition flying.
+		Converted from FlightGear by Krzysztof Kaniewski. Original 3D model created by AJ MacLeod.]>
         <[string8][DescriptionTextDE][Nur eine blaue Kiste]>
         <[string8][DescriptionTextFR][Seule une boîte bleue]>
         <[string8][DescriptionTextES][Sólo una caja azul]>

@@ -1,15 +1,15 @@
 # bocian
-This model of a Bocian-1E / SZD-9 glider is released under the terms of the
-GPLv2.
+The SZD-9 Bocian (Polish: "Stork") is a multi-purpose two-seat sailplane that was designed and built in Poland at Szybowcowy Zakład Doświadczalny (Glider Experimental Works) in Bielsko-Biała, beginning in 1952. It was designed to be capable of fulfilling the needs of every area from training to competition flying. (From Wikipedia, the free encyclopedia)
 
 This is free add-on for AeroflyFS developed by Krzysztof Kaniewski, 2015 ver. 1.0
 then for Aerofly FS2, February 2019
-3D model by AJ MacLeod. Thanks to him (Read notes below).
+3D model by AJ MacLeod. https://github.com/FGMEMBERS/bocian 
+Thanks to him (Read notes below).
 
 Some features may not work as intended and this aircraft could crash your aerofly FS2.
 Use it at your own risk!
 
-Installation
+#Installation
 
 1. Unzip file and move the folder "bocian" to C:\Users\~\Documents\Aerofly FS2\aircraft.
 
