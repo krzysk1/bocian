@@ -9,7 +9,8 @@ Thanks to him (Read notes below).
 Some features may not work as intended and this aircraft could crash your aerofly FS2.
 Use it at your own risk!
 
-#Installation
+Installation
+------------
 
 1. Unzip file and move the folder "bocian" to C:\Users\~\Documents\Aerofly FS2\aircraft.
 
