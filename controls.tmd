@@ -10,11 +10,11 @@
                 <[vector3_float64][Direction][1.0 0.0 0.0 ]>
                 <[float64][StepAngle][0.1]>
                 <[control_message][OnRotate][]
-                    <[string8][Message][PressureSetting]>
+                    <[string8][Message][PressureSettingPilot]>
                     <[string8][Qualifiers][step]>
                     <[float64][Value][1.0]>
                 >
-                <[float64][Radius][0.006]>
+                <[float64][Radius][0.01]>
                 <[float64][Length][0.015]>
             >
 			//Battery switch	
@@ -40,7 +40,7 @@
                 <[uint32][Inputs][PitchTrimInput.Output -0.5]>
             >
             <[control_product][PitchTrimTravel][]
-                <[uint32][Inputs][PitchTrimOffset.Output 0.02]>
+                <[uint32][Inputs][PitchTrimOffset.Output 1.0]>
             >
             <[control_translation][PitchTrimTranslation][2]
                 <[string8][Input][PitchTrimTravel.Output]>
@@ -51,7 +51,7 @@
                 <[vector3_float64][R0][1.666 0.2798 0.3833]>
                 <[matrix3_float64][B0][ 0.0 1.0 0.0  1.0 0.0 0.0  0.0 0.0 1.0 ]>
                 <[vector3_float64][Direction][ 0.0186 -0.00085 -0.005 ]>
-                <[float64][StepDistance][0.01]>
+                <[float64][StepDistance][0.00005]>
                 <[string8][InputTransform][PitchTrimTranslation.Output]>
                 <[control_message][OnStep][]
                     <[string8][Message][Controls.Trim]>
@@ -64,25 +64,24 @@
             // airbrake			
             <[control_input][AirBrakeHandleInput][2]
                 <[uint32][InputID][ServoAirBrake.Output]>
+                <[float64][Scaling][0.523599]>				
             >
-            <[control_product][AirBrakeHandleTravel][]
-                <[uint32][Inputs][AirBrakeHandleInput.Output 0.285]>
-            >
-            <[control_translation][AirBrakeHandleTranslation][2]
-                <[string8][Input][AirBrakeHandleTravel.Output]>
-                <[vector3_float64][Axis][-1.0 -0.001 0.0]>
-            >
+            <[control_rotation][AirBrakeHandleTransform][]
+                <[string8][Input][AirBrakeHandleInput.Output]>
+                <[tmvector3d][Axis][0.0 -1.0 0.0]>
+                <[tmvector3d][Pivot][1.85301 0.226447 0.022628]> 
+            >			
             <[control_box][AirBrakeHandle][8]
                 <[string8][Type][lever]>
                 <[vector3_float64][R0][2.01 0.218 0.1722]>
                 <[matrix3_float64][B0][ 1.0 0.0 0.0  0.0 1.0 0.0  0.0 0.0 1.0 ]>
                 <[vector3_float64][Direction][ -1.0 0.0 0.0 ]>
                 <[float64][StepDistance][0.001]>
-                <[string8][InputTransform][AirBrakeHandleTranslation.Output]>
+                <[string8][InputTransform][AirBrakeHandleTransform.Output]>
                 <[control_message][OnStep][]
                     <[string8][Message][Controls.GliderAirBrake]>
                     <[string8][Qualifiers][step]>
-                    <[float64][Value][0.003]>
+                    <[float64][Value][0.03]>
                 >
                 <[vector3_float64][Dimensions][0.03 0.03 0.11]>
             >
@@ -102,22 +101,22 @@
             >			
             // stick		
             <[control_input][ElevatorTravel][]
-                <[uint32][InputID][ServoElevator.Output]>
-                <[float64][Scaling][1.5]>
+                <[uint32][InputID][ElevatorPosition.Output]>
+                <[float64][Scaling][0.349066]>
             >
             <[control_input][AileronTravel][]
-                <[uint32][InputID][ServoStickAileron.Output]>
-                <[float64][Scaling][0.15]>
+                <[uint32][InputID][AileronPosition.Output]>
+                <[float64][Scaling][0.349066]>
             >
             <[control_rotation][ElevatorTransform][]
                 <[string8][Input][ElevatorTravel.Output]>
                 <[tmvector3d][Axis][0.0 1.0 0.0]>
-                <[tmvector3d][Pivot][1.83967 0 0.025217]>
+                <[tmvector3d][Pivot][1.83967 0 0.025217]> 
             >
             <[control_rotation][StickTransform][]
                 <[string8][Input][AileronTravel.Output]>
-                <[tmvector3d][Axis][ 1.0 0.0 0.0]>
-                <[tmvector3d][Pivot][1.83967 0 0.025217]>
+                <[tmvector3d][Axis][1.0 0.0 0.0]>
+                <[tmvector3d][Pivot][1.83967 0 0.025217]> 
                 <[string8][InputTransform][ElevatorTransform.Output]>
             >
             <[control_cylinder][StickGrip][114]
@@ -126,17 +125,17 @@
                 <[matrix3_float64][B0][ 0.0  0.0  1.0  0.0  1.0  0.0 -1.0  0.0 0.0 ]>
                 <[vector3_float64][Direction][ 1.0  0.0 0.0 ]>
                 <[vector3_float64][Direction2][ 0.0 -1.0 0.0 ]>
-                <[float64][StepDistance][0.00005]>
+                <[float64][StepDistance][0.0005]>
                 <[string8][InputTransform][StickTransform.Output]>
                 <[control_message][OnStep][]
                     <[string8][Message][Controls.Pitch.Input]>
                     <[string8][Qualifiers][step]>
-                    <[float64][Value][0.0004]>
+                    <[float64][Value][0.004]>
                 >
                 <[control_message][OnRotate][]
                     <[string8][Message][Controls.Roll.Input]>
                     <[string8][Qualifiers][step]>
-                    <[float64][Value][15.0]>
+                    <[float64][Value][7.0]>
                 >
                 <[float64][Radius][0.04]>
                 <[float64][Length][0.11]>

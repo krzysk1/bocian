@@ -16,7 +16,7 @@
                 <[bool][CompensatedVariometer][true]>
                 <[string8][Airspeed][AirspeedIndicator.IndicatedAirspeed]>
                 <[string8][AirbrakePosition][AirBrakeInput.Output]>
-                <[tmvector3d][LookAtPosition][0.049 0.000 0.434]>
+                <[tmvector3d][LookAtPosition][0.0 0.0 0.0]>
             >
 			
             // cameras start
@@ -170,7 +170,7 @@
                 <[string8][Input][MainWheelHull.Load]>
             >
 			
-            // tail gear		
+            // tail skid		
             <[skid][TailSkidHull][]
                 <[float64][K][39200]>
                 <[float64][D][392]>
@@ -551,7 +551,7 @@
             // pitch trim			
             <[input_lever][PitchTrim][]
                 <[string8][Input][Controls.Trim]>
-                <[uint][Positions][7]>
+                <[uint][Positions][21]>
                 <[tmvector2d][Range][ -1.0 1.0 ]>
                 <[float64][Value][0.5]>
                 <[float64][Speed][0.0]>
