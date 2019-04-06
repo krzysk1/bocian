@@ -87,7 +87,7 @@
                 <[float64][Dtz][1000.0]>
                 <[string8][Body0][Fuselage]>
                 <[string8][Body1][LeftWing]>
-                <[float64][ForceMax][150000.0]>
+                <[float64][ForceMax][50000.0]>
                 <[float64][TorqueMax][30000.0]>
             >
             <[rigidbody][RightWing][]
@@ -112,7 +112,7 @@
                 <[float64][Dtz][1000.0]>
                 <[string8][Body0][Fuselage]>
                 <[string8][Body1][RightWing]>
-                <[float64][ForceMax][150000.0]>
+                <[float64][ForceMax][50000.0]>
                 <[float64][TorqueMax][30000.0]>
             >
             <[collisionhull][CollisionFuselage][]
@@ -146,8 +146,8 @@
                 <[string8][Body1][MainGear]>
                 <[tmvector3d][X0][ 0.0 0.0 1.0 ]>
                 <[tmvector3d][R0][0.679 0 -0.2682]> 
-                <[float64][Kp][100000.0]>
-                <[float64][Kd][1500.0]>
+                <[float64][Kp][200000.0]>
+                <[float64][Kd][5000.0]>
                 <[float64][InitialVelocity][0.0]>
                 <[uint32][Type][1]>
             >
@@ -157,16 +157,16 @@
                 <[float64][Radius][0.172]>
                 <[float64][Width][0.0987]>
                 <[float64][RimRadius][0.0813]>
-                <[float64][Inflation][120528.4]>					
+                <[float64][Inflation][220528.4]>					
                 <[string8][Body][MainGear]>
                 <[tmvector3d][R0][0.4796 0 -0.3413]> 
                 <[string8][InputBrake][ServoBrake.Output]>
 				<[float64][BrakeStrength][0.3]>				
             >
-            <[output][GroundRollSpeedMainWheel][]
+            <[output][GroundRollSpeed][]
                 <[string8][Input][MainWheelHull.Speed]>
             >
-            <[output][GroundRollLoadMainWheel][]
+            <[output][GroundRollLoad][]
                 <[string8][Input][MainWheelHull.Load]>
             >
 			
@@ -1202,7 +1202,13 @@
             >
             <[graphics_mapping][vsi2_needleMapping][]
                 <[string8][Input][vsi2_needleInput.Output]>
-                <[tmvector2d][Map][(-59.055 -2.181662) (-19.685 -1.396263) (-9.8425 -0.907571) (0 0.0) (9.8425 0.959931) (19.685 1.518436) (59.055 2.356194)]>
+                <[tmvector2d][Map][(-59.055 -2.181662) 
+									(-19.685 -1.396263) 
+									(-9.8425 -0.907571) 
+									(0 0.0) 
+									(9.8425 0.959931) 
+									(19.685 1.518436) 
+									(59.055 2.356194)]>
             >
             <[hingedbodygraphics][vsi2_needle][]
                 <[string8][GeometryList][ vsi2_needle ]>
@@ -1241,11 +1247,11 @@
             >
             <[soundmapping][GliderVolume][]
                 <[string8][Input][Airspeed.Output]>
-                <[tmvector2d][Map][ (0.0 0.0) (15.0 0.0) (200.0 1.0) ]>
+                <[tmvector2d][Map][ (0.0 0.0) (12.0 0.0) (200.0 1.5) ]>
             >
             <[soundmapping][GliderPitch][]
                 <[string8][Input][Airspeed.Output]>
-                <[tmvector2d][Map][ (0.0 0.66) ( 33.33 1.0 ) (200.0 3.0) ]>
+                <[tmvector2d][Map][ (0.0 0.66) (33.33 1.0) (200.0 3.0) ]>
             >
             <[soundloop][GliderVolumeLoop][]
                 <[uint32][PositionID][Fuselage.R]>
@@ -1261,7 +1267,7 @@
             >
             <[soundmapping][AccelerationMapping][]
                 <[string8][Input][Acceleration.Output]>
-                <[tmvector2d][Map][ (-100.0 1.5) ( 0.0 0.0 ) (100.0 1.5) ]>
+                <[tmvector2d][Map][ (-100.0 1.5) (0.0 0.0) (100.0 1.5) ]>
             >
             <[soundmultiply][HighVolume][]
                 <[string8][Input0][AccelerationMapping.Output]>
@@ -1281,7 +1287,7 @@
             >
             <[soundmapping][SideSlipVolume][]
                 <[string8][Input][SideSlip.Output]>
-                <[tmvector2d][Map][ (-30.0 0.5) (0.0 0.0 ) (30.0 0.5) ]>
+                <[tmvector2d][Map][ (-30.0 0.5) (0.0 0.0) (30.0 0.5) ]>
             >
             <[soundloop][SideSlipVolumeLoop][]
                 <[uint32][PositionID][Fuselage.R]>
@@ -1295,7 +1301,7 @@
             // airbrake
             <[soundmapping][AirbrakeWhistleMap][]
                 <[string8][Input][AirbrakePosition.Output]>
-                <[tmvector2d][Map][ (0.0 0.0) (0.1 1.0 ) (0.2 1.0 )  (0.3 0.0 ) (1.0 0.0) ]>
+                <[tmvector2d][Map][ (0.0 0.0) (0.1 1.0) (0.2 1.0) (0.3 0.0) (1.0 0.0) ]>
             >
             <[soundmultiply][AirbrakeWhistleVolume][]
                 <[string8][Input0][AirbrakeWhistleMap.Output]>
@@ -1316,14 +1322,14 @@
             >
             <[soundmapping][GroundRollFactor][]
                 <[string8][Input][GroundRollLoad.Output]>
-                <[tmvector2d][Map][ (0.0 0.0) (1000.0 1.0 ) ]>
+                <[tmvector2d][Map][ (0.0 0.0) (1000.0 1.0) ]>
             >
             <[soundinput][GroundRollSpeed][]
                 <[uint32][InputID][GroundRollSpeed.Output]>
             >
             <[soundmapping][GroundRollFactor1][]
                 <[string8][Input][GroundRollSpeed.Output]>
-                <[tmvector2d][Map][ (-20.0 1.0) (0.0 0.0) (20.0 1.0 ) ]>
+                <[tmvector2d][Map][ (-20.0 1.0) (0.0 0.0) (20.0 1.0) ]>
             >
             <[soundmultiply][GroundRollVolume][]
                 <[string8][Input0][GroundRollFactor.Output]>
