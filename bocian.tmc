@@ -30,6 +30,6 @@
         <[float64][QVirgin][1952]>
         <[bool][Airplane][true]>
         <[bool][Flaps][true]>
-    <[string8][Pilot][]>
+		<[string8][Pilot][]>
     >
 >

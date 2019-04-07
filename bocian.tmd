@@ -73,21 +73,21 @@
             >
             <[jointlinear][JointFuselageLeftWing][]
                 <[tmvector3d][R0][-0.29 0.4813 0.46235]> 
-                <[float64][Kfx][10000000.0]>
-                <[float64][Kfy][10000000.0]>
-                <[float64][Kfz][10000000.0]>
+                <[float64][Kfx][1000000.0]>
+                <[float64][Kfy][1000000.0]>
+                <[float64][Kfz][1000000.0]>
                 <[float64][Dfx][200.0]>
                 <[float64][Dfy][200.0]>
                 <[float64][Dfz][200.0]>
                 <[float64][Ktx][190000.0]>
-                <[float64][Kty][900000.0]>
-                <[float64][Ktz][900000.0]>
+                <[float64][Kty][500000.0]>
+                <[float64][Ktz][500000.0]>
                 <[float64][Dtx][80.0]>
                 <[float64][Dty][900.0]>
                 <[float64][Dtz][1000.0]>
                 <[string8][Body0][Fuselage]>
                 <[string8][Body1][LeftWing]>
-                <[float64][ForceMax][50000.0]>
+                <[float64][ForceMax][500000.0]>
                 <[float64][TorqueMax][30000.0]>
             >
             <[rigidbody][RightWing][]
@@ -98,21 +98,21 @@
             >
             <[jointlinear][JointFuselageRightWing][]
                 <[tmvector3d][R0][-0.29 -0.4813 0.46235]> 
-                <[float64][Kfx][10000000.0]>
-                <[float64][Kfy][10000000.0]>
-                <[float64][Kfz][10000000.0]>
+                <[float64][Kfx][1000000.0]>
+                <[float64][Kfy][1000000.0]>
+                <[float64][Kfz][1000000.0]>
                 <[float64][Dfx][200.0]>
                 <[float64][Dfy][200.0]>
                 <[float64][Dfz][200.0]>
                 <[float64][Ktx][190000.0]>
-                <[float64][Kty][900000.0]>
-                <[float64][Ktz][900000.0]>
+                <[float64][Kty][500000.0]>
+                <[float64][Ktz][500000.0]>
                 <[float64][Dtx][80.0]>
                 <[float64][Dty][900.0]>
                 <[float64][Dtz][1000.0]>
                 <[string8][Body0][Fuselage]>
                 <[string8][Body1][RightWing]>
-                <[float64][ForceMax][50000.0]>
+                <[float64][ForceMax][500000.0]>
                 <[float64][TorqueMax][30000.0]>
             >
             <[collisionhull][CollisionFuselage][]
