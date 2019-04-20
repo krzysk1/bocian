@@ -758,7 +758,16 @@
             // attitude
 
             // balance
-
+			
+			// accelerometer
+            <[accelerometer][Accelerometer][]
+                <[string8][Body][Fuselage]>
+                <[tmvector3d][R0][ 1.1469 0.0 0.6404 ]>
+            >			
+            <[output][AccelerometerNeedle][]
+                <[string8][Input][Accelerometer.Acceleration]>
+            >
+			
             // turn coordinator
             <[turn_coordinator][TurnCoordinator][]
                 <[string8][Body][Fuselage]>
