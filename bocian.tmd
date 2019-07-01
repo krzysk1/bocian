@@ -264,7 +264,7 @@
                 <[float64][ClAlpha][5.729578]>
                 <[float64][CdAlpha][0.687549]>
                 <[float64][CmAlpha][0.0]>
-                <[float64][ClFlap][1.5]>
+                <[float64][ClFlap][2.1]>
                 <[float64][CdFlap][0.0]>
                 <[float64][CmFlap][-0.2]>
                 <[float64][Cd0Base][0.005]>
@@ -284,7 +284,7 @@
                 <[float64][ClAlpha][6.308266]>
                 <[float64][CdAlpha][0.521392]>
                 <[float64][CmAlpha][0.0]>
-                <[float64][ClFlap][1.5]>
+                <[float64][ClFlap][2.1]>
                 <[float64][CdFlap][0.005]>
                 <[float64][CmFlap][-0.2]>
                 <[float64][Cd0Base][0.005]>
@@ -295,7 +295,7 @@
                 <[float64][AttachedCenter][0.0]>
                 <[float64][AttachedRange][0.174533]>
                 <[float64][StallRange][0.139626]>
-                <[float64][AttachedCenterFlap][-0.12]>
+				<[float64][AttachedCenterFlap][-0.12]>
             >
             <[airfoil][AirfoilRoot][]
                 <[float64][Cl0][0.15]>
@@ -304,7 +304,7 @@
                 <[float64][ClAlpha][8.594367]>
                 <[float64][CdAlpha][0.802141]>
                 <[float64][CmAlpha][0.002865]>
-                <[float64][ClFlap][1.5]>
+                <[float64][ClFlap][1.8]>
                 <[float64][CdFlap][0.005]>
                 <[float64][CmFlap][-0.2]>
                 <[float64][Cd0Base][0.005]>
@@ -324,7 +324,7 @@
                 <[float64][ClAlpha][8.594367]>
                 <[float64][CdAlpha][0.802141]>
                 <[float64][CmAlpha][0.002865]>
-                <[float64][ClFlap][1.5]>
+                <[float64][ClFlap][1.8]>
                 <[float64][CdFlap][0.005]>
                 <[float64][CmFlap][-0.2]>
                 <[float64][Cd0Base][0.005]>
@@ -767,7 +767,7 @@
             <[output][AccelerometerNeedle][]
                 <[string8][Input][Accelerometer.Acceleration]>
             >
-			
+
             // turn coordinator
             <[turn_coordinator][TurnCoordinator][]
                 <[string8][Body][Fuselage]>
