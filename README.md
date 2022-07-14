@@ -7,13 +7,13 @@ then for Aerofly FS2, April 2019; then for Aerofly FS4, July 2022
 3D model by AJ MacLeod. https://github.com/FGMEMBERS/bocian 
 Thanks to him (Read note below).
 
-Some features may not work as intended and this aircraft could crash your aerofly FS2.
+Some features may not work as intended and this aircraft could crash your aerofly FS4.
 Use it at your own risk!
 
 Installation
 ------------
 
-1. Unzip file and move the folder "bocian" to C:\Users\~\Documents\Aerofly FS2\aircraft.
+1. Unzip file and move the folder "bocian" to C:\Users\~\Documents\Aerofly FS4\aircraft.
 
 Note from AJ MacLeod:
 ---------------------
