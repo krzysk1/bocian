@@ -3,7 +3,7 @@
         <[int][Version][220]>
         <[vec32array][ContactSpheres][ (0.4796 0.0 -0.3413 0.172) (-4.32 0.0 0.0 0.034) (0.32 -9.23 1.14 0.034) (0.32 9.23 1.14 0.034) ]>
         <[string8][ICAO][SZD9]>
-        <[string8][DisplayName][Bocian]>
+        <[string8][DisplayName][SZD-9 Bocian]>
         <[string8][DisplayNameFull][SZD-9 Bocian]>
         <[localized_text_list][Descriptions][]
             <[localized_text][][]
