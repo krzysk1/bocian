@@ -8,8 +8,12 @@
         <[localized_text_list][Descriptions][]
             <[localized_text][][]
                 <[string8][Language][en]>
-                <[string8][Text][The SZD-9 Bocian (Polish: "Stork") is a multi-purpose two-seat sailplane that was designed and built in Poland at Szybowcowy Zakład Doświadczalny (Glider Experimental Works) in Bielsko-Biała, beginning in 1952. It was designed to be capable of fulfilling the needs of every area from training to competition flying. Converted from FlightGear by Krzysztof Kaniewski. Original 3D model created by AJ MacLeod.]>
-            >
+                <[string8][Text][The SZD-9 Bocian is a multi-purpose two-seat sailplane that was designed and built in Poland at Szybowcowy Zakład Doświadczalny (Glider Experimental Works) in Bielsko-Biała, beginning in 1952. It was designed to be capable of fulfilling the needs of every area from training to competition flying. Converted from FlightGear by Krzysztof Kaniewski. Original 3D model created by AJ MacLeod.]>
+ 			>
+            <[localized_text][][]
+                <[string8][Language][de]>
+                <[string8][Text][Der PZL Bielsko SZD-9 Bocian ist ein zweisitziges polnisches Schulsegelflugzeug. Der Mitteldecker wurde in Holzbauweise hergestellt. Der Bocian ist für alle Arten der Segelflugausbildung einschließlich einfachem Kunstflug geeignet. Bis heute wird der SZD-9 Bocian in einigen Staaten noch zur Ausbildung eingesetzt, zum Beispiel in Polen und in Deutschland. Konvertiert von FlightGear durch Krzysztof Kaniewski. 3d-Modell erstellt von AJ MacLeod.]>
+			>			
         >
 		<[float64][WingSpan][17.8]>
 		<[float64][MaximumAirspeed][54.0]>
@@ -29,7 +33,7 @@
         <[uint][UnitsBuilt][615]>
         <[uint][EngineCount][0]>
         <[uint][Year][1952]>
-        <[string8][Tags][ airplane glider winch_hook tow_hook ]>
+        <[string8][Tags][ airplane glider gear trainer tailgear winch_hook tow_hook ]>
 		<[string8][Pilot][]>
     >
 >
