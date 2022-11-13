@@ -13,15 +13,15 @@
             <[localized_text][][]
                 <[string8][Language][de]>
                 <[string8][Text][Der PZL Bielsko SZD-9 Bocian ist ein zweisitziges polnisches Schulsegelflugzeug. Der Mitteldecker wurde in Holzbauweise hergestellt. Der Bocian ist für alle Arten der Segelflugausbildung einschließlich einfachem Kunstflug geeignet. Bis heute wird der SZD-9 Bocian in einigen Staaten noch zur Ausbildung eingesetzt, zum Beispiel in Polen und in Deutschland. Konvertiert von FlightGear durch Krzysztof Kaniewski. 3d-Modell erstellt von AJ MacLeod.]>
-			>			
+			>
         >
 		<[float64][WingSpan][17.8]>
 		<[float64][MaximumAirspeed][54.0]>
-		<[float64][MaximumSpeed][54.0]>		
+		<[float64][MaximumSpeed][54.0]>
 		<[float64][MinimumAirspeed][16.2]>
         <[float64][ApproachAirspeed][33.3]>
         <[float64][CruiseAirspeed][55.6]>
-        <[float64][CruiseSpeed][55.6]>		
+        <[float64][CruiseSpeed][55.6]>
 		<[tmvector2d][NormalAirspeedRange][ 16.2 35.1 ]>
 		<[tmvector2d][CautionAirspeedRange][ 35.1 54.0 ]>
 		<[tmvector2d][FlapAirspeedRange][ 16.2 48.6 ]>
