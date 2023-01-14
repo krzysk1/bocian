@@ -1,19 +1,24 @@
 # bocian
 The SZD-9 Bocian (Polish: "Stork") is a multi-purpose two-seat sailplane that was designed and built in Poland at Szybowcowy Zakład Doświadczalny (Glider Experimental Works) in Bielsko-Biała, beginning in 1952. It was designed to be capable of fulfilling the needs of every area from training to competition flying. (From Wikipedia, the free encyclopedia)
 
-This is free add-on for AeroflyFS developed by Krzysztof Kaniewski, 2015 ver. 1.0
+This is free add-on for AeroflyFS created by Krzysztof Kaniewski, 2015 ver. 1.0
 then for Aerofly FS2, April 2019; then for Aerofly FS4, July 2022
 
 3D model by AJ MacLeod. https://github.com/FGMEMBERS/bocian 
 Thanks to him (Read note below).
 
-Some features may not work as intended and this aircraft could crash your aerofly FS4.
-Use it at your own risk!
+ Some features may not work as intended and this aircraft could crash your Aerofly FS4. 
+ Use it at your own risk!
 
 Installation
 ------------
 
-1. Unzip file and move the folder "bocian" to C:\Users\~\Documents\Aerofly FS4\aircraft.
+1. Unzip file and move the folder "bocian" into the C:\Users\~\Documents\Aerofly FS 4\aircraft folder.
+
+Uninstall
+---------
+
+1. Delete the folder "bocian".
 
 Note from AJ MacLeod:
 ---------------------
