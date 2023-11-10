@@ -4,7 +4,7 @@
 	// Plane: SZD-9bis Bocian 1E
 	// 3D Design: AJ MacLeod, 12th June 2007
 	// Compilation: by krzysk(at)wp.pl
-	// Date: Dec 2014 (AFS1) to Jul 2022 (AFS4)
+	// Date: Dec 2014 (AFS1) to Jul 2022; May 2023 (AFS4)
 	//-------------------------------------
 
     <[modelmanager][][]
@@ -125,12 +125,14 @@
                 <[float64][D][9780]>
                 <[string8][Body][LeftWing]>
                 <[string8][Geometry][WingPort]>
+                <[bool][NoCrash][true]>
             >
             <[collisionhull][CollisionRightWing][]
                 <[float64][K][978000]>
                 <[float64][D][9780]>
                 <[string8][Body][RightWing]>
                 <[string8][Geometry][WingStbd]>
+                <[bool][NoCrash][true]>
             >
 
             // main gear
@@ -552,7 +554,7 @@
                 <[string8][Message][Controls.Trim]>
                 <[uint][Positions][21]>
                 <[tmvector2d][Range][ -1.0 1.0 ]>
-                <[float64][Value][0.5]>
+                <[float64][Value][0.0]>
                 <[float64][Speed][0.0]>
             >
             <[sender][SenderTrim][]
