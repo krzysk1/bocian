@@ -1,7 +1,7 @@
 <[file][][]
     <[object][][]
         <[int][Version][220]>
-        <[vec32array][ContactSpheres][ (0.4796 0.0 -0.3413 0.172) (-4.225 0.0 0.0 0.036) (0.32 -9.23 1.14 0.034) (0.32 9.23 1.14 0.034) ]>
+        <[vec32array][ContactSpheres][ (0.480 0.0 -0.341 0.172) (-4.225 0.0 0.0 0.036) (0.32 -9.23 1.14 0.034) (0.32 9.23 1.14 0.034) ]>
         <[string8][ICAO][SZD9]>
         <[string8][DisplayName][SZD-9 Bocian]>
         <[string8][DisplayNameFull][SZD-9 Bocian]>
