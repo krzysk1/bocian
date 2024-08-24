@@ -33,7 +33,7 @@
         <[uint][UnitsBuilt][615]>
         <[uint][EngineCount][0]>
         <[uint][Year][1952]>
-        <[string8][Tags][ airplane glider gear trainer tailgear winch_hook tow_hook ]>
+        <[string8][Tags][ airplane glider gear trainer winch_hook tow_hook ]>
 		<[string8][Pilot][]>
     >
 >

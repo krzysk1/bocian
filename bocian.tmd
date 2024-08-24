@@ -1,7 +1,7 @@
 <[file][][]
 
 	//-------------------------------------
-	// Plane: SZD-9bis Bocian 1E
+	// Plane: SZD-9bis Bocian 1E for Aerofly FS4
 	// 3D Design: AJ MacLeod, 12th June 2007
 	// Compilation: by krzysk(at)wp.pl
 	// Date: Dec 2014 (AFS1) to Jul 2022; May 2023 (AFS4)
@@ -13,8 +13,12 @@
             // telemetry
             <[telemetry][Telemetry][]
                 <[string8][Body][Fuselage]>
-                <[tmvector3d][LookAtPosition][0.0 0.0 0.0]>
+                <[tmvector3d][LookAtPosition][0.049 0.000 0.434]>
             >
+            <[sender][SenderMass][]
+                <[string8][Input][472.0]>
+                <[string8][Message][Aircraft.Mass]>
+            >			
 
             // cameras start
 
@@ -30,28 +34,47 @@
                 <[tmvector3d][Direction][0.99 0.0 -0.2]>
                 <[bool][InCockpit][true]>
             >
-            <[camera][CameraLeftSide][]
-                <[string8][Tags][left wing]>
+            // <[camera_head][CameraCopilot][]
+                // <[string8][Body][Fuselage]>
+                // <[tmvector3d][R0][ 0.462 0.0 0.812 ]>
+                // <[tmvector3d][Direction][ 0.995 0.0 -0.12 ]>
+                // <[bool][InCockpit][true]>
+                // <[string8][Tags][ cockpit copilot rear ]>
+            // >			
+            <[camera][CameraGearView][]
                 <[string8][Body][Fuselage]>
-                <[tmvector3d][R0][6.585 9.07 -1.2283]>
-                <[tmvector3d][Direction][ -0.3735 -0.9192 0.1245 ]>
-                <[bool][InCockpit][false]>
+                <[tmvector3d][R0][ -4.735966 0.394402 0.104543 ]>
+                <[tmvector3d][Direction][ 1.0 0.0 0.0 ]>
+                <[bool][InCockpit][true]>
+                <[string8][Tags][ gear ]>
             >
-            <[camera][CameraRightSide][]
-                <[string8][Tags][right wing]>
+            <[camera][CameraStabilizer][]
                 <[string8][Body][Fuselage]>
-                <[tmvector3d][R0][-7.9975 -9.07 2.5795]>
-                <[tmvector3d][Direction][ 0.7562 0.6294 -0.1790 ]>
+                <[tmvector3d][R0][ -4.5 0.0 1.4 ]>
+                <[tmvector3d][Direction][ 1.0 0.0 -0.2 ]>
+                <[float64][Cone][-0.2]>
                 <[bool][InCockpit][false]>
+                <[string8][Tags][ tail stabilizer ]>
             >
-            <[camera][CameraNose][]
-                <[string8][Tags][front]>
-                <[string8][Body][Fuselage]>
-                <[tmvector3d][R0][8.585 1.8425 1.8425]>
-                <[tmvector3d][Direction][ -0.9091 -0.2946 -0.2946 ]>
+            <[camera][CameraLeftFuselageView][]
+                <[string8][Body][LeftWing]>
+                <[tmvector3d][R0][ 0.2 9.8 1.75 ]>
+                <[tmvector3d][X0][ 0.0 -1.0 0.0 ]>
+                <[tmvector3d][Direction][ 0.0 -1.0 -0.1 ]>
+                <[float64][Cone][0.0]>
                 <[bool][InCockpit][false]>
+                <[string8][Tags][ fuselage wing left ]>
             >
-
+            <[camera][CameraRightFuselageView][]
+                <[string8][Body][RightWing]>
+                <[tmvector3d][R0][ 0.2 -9.8 1.75 ]>
+                <[tmvector3d][X0][ 0.0 1.0 0.0 ]>
+                <[tmvector3d][Direction][ 0.0 1.0 -0.1 ]>
+                <[float64][Cone][0.0]>
+                <[bool][InCockpit][false]>
+                <[string8][Tags][ fuselage wing right ]>
+            >
+			
             // cameras end
 
 
@@ -450,27 +473,63 @@
             // hook
             <[event_sound][HookReleaseSound][]
             >
-            <[input_button][HookReleaseButton][]
+            <[input_discrete_momentary][HookRelease][]
                 <[string8][Message][Controls.HookRelease]>
+                <[tmvector2d][Range][ 0.0 1.0 ]>
+                <[string8][EventsUp]  [ HookReleaseSound.Trigger ]>
+                <[string8][EventsDown][ HookReleaseSound.Trigger ]>
+            >
+            <[output_free][HookReleaseOutput][]
+                <[string8][Input][HookRelease.Output]>
+            >
+
+            <[hook_release][WinchHookReleased][]
+                <[string8][Body][Fuselage]>
+                <[tmvector3d][R0][ 1.287 0.128 -0.247 ]>
+                <[tmvector3d][Direction][ -1.0 0.0 -0.1 ]>
+                <[string8][Input][HookRelease.Output]>
+                <[float64][AutoReleaseForce][5.0]>
+                <[float64][WeakLink][10000.0]>
+            >
+            <[sender][SenderWinchConnected][]
+                <[string8][Input][WinchHookReleased.OutputConnected]>
+                <[string8][Message][Aircraft.WinchConnected]>
+            >
+            <[attachment_point][WinchHookAttachmentPoint][]
+                <[string8][Body][Fuselage]>
+                <[tmvector3d][R0][ 1.287 0.128 -0.247 ]>
+            >
+            <[event_sound][HookReleaseSoundAuto][]
+            >
+            <[event_edge_falling][HookAutoReleaseSound][]
+                <[string8][Input][WinchHookReleased.OutputConnected]>
                 <[string8][Events][ HookReleaseSound.Trigger ]>
-                <[string8][EventsRelease][ HookReleaseSound.Trigger ]>
+                <[float64][Value][0.0]>
             >
-            <[input_active][HookRelease][]
-                <[string8][Message][Controls.HookRelease]>
-            >
-            <[hook][WinchHook][]
+
+            <[hook_release][TowHookReleased][]
                 <[string8][Body][Fuselage]>
-                <[tmvector3d][R0][1.2873 0.1282 -0.2468]>
-                <[string8][ReleaseControl][HookRelease.Output]>
+                <[tmvector3d][R0][ 2.9 0 0 ]>
+                <[tmvector3d][Direction][ 1.0 0.0 0.0 ]>
+                <[string8][Input][HookRelease.Output]>
+                <[float64][WeakLink][5000.0]>
             >
-            <[hook][TowHook][]
+            <[sender][SenderTowConnected][]
+                <[string8][Input][TowHookReleased.OutputConnected]>
+                <[string8][Message][Aircraft.TowConnected]>
+            >
+            <[attachment_point][TowHookAttachmentPoint][]
                 <[string8][Body][Fuselage]>
-                <[tmvector3d][R0][2.9 0 0]>
-                <[string8][ReleaseControl][HookRelease.Output]>
+                <[tmvector3d][R0][ 2.9 0 0 ]>
+            >
+
+            <[attachment_point][WingHolderAttachmentPoint][]
+                <[string8][Body][LeftWing]>
+                <[tmvector3d][R0][ 0.32 9.23 1.14 ]>
             >
             <[servolinear][ServoHook][]
                 <[string8][Input][HookRelease.Output]>
-                <[float64][OutputSpeed][10.0]>
+                <[float64][OutputSpeed][5.0]>
                 <[float64][Position][0.0]>
                 <[float64array][InputPosition][ 0.0 1.0 ]>
                 <[float64array][OutputPosition][ 0.0 1.0 ]>
@@ -478,7 +537,7 @@
             <[output][ServoHookOutput][]
                 <[string8][Input][ServoHook.Output]>
             >
-
+			
             // primary flight controls start
 
             // elevator
@@ -867,7 +926,7 @@
                 <[string8][GeometryList][ Pilot ]>
                 <[uint32][PositionID][PilotBody.R]>
                 <[uint32][OrientationID][PilotBody.Q]>
-                <[uint32][ShowInside][0]>
+                <[uint32][ShowInside][ CameraCopilot ]>
             >
             <[rigidbodygraphics][CopilotBody][]
                 <[string8][GeometryList][ Copilot ]>
@@ -1271,8 +1330,9 @@
                 <[tmvector2d][Map][ (0.0 0.66) (33.33 1.0) (200.0 3.0) ]>
             >
             <[soundloop][GliderVolumeLoop][]
-                <[uint32][PositionID][Fuselage.R]>
-                <[uint32][VelocityID][Fuselage.V]>
+                <[uint32][PositionID]   [Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
+                <[uint32][VelocityID]   [Fuselage.V]>
                 <[string8][InputVolume][GliderVolume.Output]>
                 <[string8][InputPitch][GliderPitch.Output]>
                 <[string8][SoundFile][glider.wav]>
@@ -1301,8 +1361,9 @@
             <[soundloop][GliderVolumeLoop2][]
                 <[string8][InputVolume][GliderVolumeIntake.Output]>
                 <[string8][InputPitch][GliderPitchIntake.Output]>
-                <[uint32][PositionID][Fuselage.R]>
-                <[uint32][VelocityID][Fuselage.V]>
+                <[uint32][PositionID]   [Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
+                <[uint32][VelocityID]   [Fuselage.V]>
                 <[string8][SoundFile][wind.wav]>
                 <[bool][External][false]>
             >
@@ -1336,8 +1397,9 @@
                 <[tmvector2d][Map][ (-30.0 0.5) (0.0 0.0) (30.0 0.5) ]>
             >
             <[soundloop][SideSlipVolumeLoop][]
-                <[uint32][PositionID][Fuselage.R]>
-                <[uint32][VelocityID][Fuselage.V]>
+                <[uint32][PositionID]   [Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
+                <[uint32][VelocityID]   [Fuselage.V]>
                 <[string8][InputVolume][SideSlipVolume.Output]>
                 <[string8][InputPitch][1.0]>
                 <[string8][SoundFile][glider_sideslip.wav]>
@@ -1354,8 +1416,9 @@
                 <[string8][Input1][GliderVolume.Output]>
             >
             <[soundloop][AirbrakeWhistle][]
-                <[uint32][PositionID][Fuselage.R]>
-                <[uint32][VelocityID][Fuselage.V]>
+                <[uint32][PositionID]   [Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
+                <[uint32][VelocityID]   [Fuselage.V]>
                 <[string8][InputVolume][AirbrakeWhistleVolume.Output]>
                 <[string8][InputPitch][1.0]>
                 <[string8][SoundFile][airbrake_whistle.wav]>
@@ -1386,8 +1449,9 @@
                 <[tmvector2d][Map][ (-50.0 1.5) (0.0 0.5) (50.0 1.5 ) ]>
             >
             <[soundloop][GroundRollLoop][]
-                <[uint32][PositionID][Fuselage.R]>
-                <[uint32][VelocityID][Fuselage.V]>
+                <[uint32][PositionID]   [Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
+                <[uint32][VelocityID]   [Fuselage.V]>
                 <[string8][InputVolume][GroundRollVolume.Output]>
                 <[string8][InputPitch][GroundRollPitch.Output]>
                 <[string8][SoundFile][ground_roll.wav]>
@@ -1398,8 +1462,9 @@
                 <[uint32][InputID][ServoAirBrake.Output]>
             >
             <[soundsingle][AirbrakePositionOut][]
-                <[uint32][PositionID][Fuselage.R]>
-                <[uint32][VelocityID][Fuselage.V]>
+                <[uint32][PositionID]   [Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
+                <[uint32][VelocityID]   [Fuselage.V]>
                 <[string8][InputTrigger][AirbrakePosition.Output]>
                 <[string8][InputPitch][1.0]>
                 <[string8][SoundFile][glider_airbrake_out.wav]>
@@ -1408,8 +1473,9 @@
                 <[bool][External][false]>
             >
             <[soundsingle][AirbrakePositionIn][]
-                <[uint32][PositionID][Fuselage.R]>
-                <[uint32][VelocityID][Fuselage.V]>
+                <[uint32][PositionID]   [Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
+                <[uint32][VelocityID]   [Fuselage.V]>
                 <[string8][InputTrigger][AirbrakePosition.Output]>
                 <[string8][InputPitch][1.0]>
                 <[string8][SoundFile][glider_airbrake_in.wav]>
@@ -1423,22 +1489,25 @@
                 <[uint32][InputID][HookReleaseSound.Output]>
             >
             <[sound_multi][SoundHookRelease][]
-                <[uint32][PositionID][Fuselage.R]>
-                <[uint32][VelocityID][Fuselage.V]>
+                <[uint32][PositionID]   [Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
+                <[uint32][VelocityID]   [Fuselage.V]>
                 <[string8][InputTrigger][HookReleaseSound.Output]>
                 <[string8][InputVolume][0.1]>
                 <[string8][InputPitch][0.6]>
                 <[string8][SoundFile][winch_release.wav]>
+                <[tmvector3d][R0][ 2.1 0.186 0.290 ]>
                 <[bool][External][false]>
-            >
+            >			
 
             // buttons and switches
             <[soundinput][SwitchSound][]
                 <[uint32][InputID][SwitchSound.Output]>
             >
             <[sound_multi][SoundSwitch][]
-                <[uint32][PositionID][Fuselage.R]>
-                <[uint32][VelocityID][Fuselage.V]>
+                <[uint32][PositionID]   [Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
+                <[uint32][VelocityID]   [Fuselage.V]>
                 <[string8][InputTrigger][SwitchSound.Output]>
                 <[string8][InputVolume][0.2]>
                 <[string8][InputPitch][1.0]>
