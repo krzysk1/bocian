@@ -525,7 +525,7 @@
 
             <[attachment_point][WingHolderAttachmentPoint][]
                 <[string8][Body][LeftWing]>
-                <[tmvector3d][R0][ 0.32 9.23 1.14 ]>
+                <[tmvector3d][R0][ 0.6797 9.1882 1.1821 ]> 
             >
             <[servolinear][ServoHook][]
                 <[string8][Input][HookRelease.Output]>
