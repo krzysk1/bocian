@@ -7,15 +7,15 @@
         <[string8][DisplayNameFull][SZD-9 Bocian]>
         <[list_localized_text][Descriptions][]
             <[localized_text][element][0]
-                <[string8][Language][en]>
+                <[string8u][Language][en]>
                 <[string8][Text][The SZD-9 Bocian is a multi-purpose two-seat sailplane that was designed and built in Poland at Szybowcowy Zakład Doświadczalny (Glider Experimental Works) in Bielsko-Biała, beginning in 1952. It was designed to be capable of fulfilling the needs of every area from training to competition flying. Converted from FlightGear by Krzysztof Kaniewski. Original 3D model created by AJ MacLeod.]>
  			>
             <[localized_text][element][1]
-                <[string8][Language][de]>
+                <[string8u][Language][de]>
                 <[string8][Text][Der PZL Bielsko SZD-9 Bocian ist ein zweisitziges polnisches Schulsegelflugzeug. Der Mitteldecker wurde in Holzbauweise hergestellt. Der Bocian ist für alle Arten der Segelflugausbildung einschließlich einfachem Kunstflug geeignet. Bis heute wird der SZD-9 Bocian in einigen Staaten noch zur Ausbildung eingesetzt, zum Beispiel in Polen und in Deutschland. Konvertiert von FlightGear durch Krzysztof Kaniewski. 3d-Modell erstellt von AJ MacLeod.]>
 			>
             <[localized_text][element][2]
-                <[string8][Language][pl]>
+                <[string8u][Language][pl]>
                 <[string8][Text][SZD-9 Bocian to dwumiejscowy szybowiec wielozadaniowy, który został zaprojektowany i zbudowany w Polsce w Szybowcowym Zakładzie Doświadczalnym w Bielsku-Białej, począwszy od 1952 roku. Zaprojektowano go tak, aby był w stanie zaspokoić potrzeby każdego obszaru, od szkolenia po latanie zawodnicze. Przerobiony z FlightGear przez Krzysztofa Kaniewskiego. Oryginalny model 3D stworzony przez AJ MacLeoda.]>
 			>
         >
@@ -26,17 +26,17 @@
         <[float64][ApproachAirspeed][33.3]>
         <[float64][CruiseAirspeed][55.6]>
         <[float64][CruiseSpeed][55.6]>
-		<[tmvector2d][NormalAirspeedRange][ 16.2 35.1 ]>
-		<[tmvector2d][CautionAirspeedRange][ 35.1 54.0 ]>
-		<[tmvector2d][FlapAirspeedRange][ 16.2 48.6 ]>
+		<[vector2_float64][NormalAirspeedRange][ 16.2 35.1 ]>
+		<[vector2_float64][CautionAirspeedRange][ 35.1 54.0 ]>
+		<[vector2_float64][FlapAirspeedRange][ 16.2 48.6 ]>
         <[float64][MaximumAltitude][4715.0]>
         <[float64][CruiseAltitude][1826.0]>
         <[float64][MaximumTakeoffMass][540.0]>
         <[float64][MaximumRange][0.0]>
         <[float64][MaximumGlideRatio][26.0]>
-        <[uint][UnitsBuilt][615]>
-        <[uint][EngineCount][0]>
-        <[uint][Year][1952]>
+        <[uint32][UnitsBuilt][615]>
+        <[uint32][EngineCount][0]>
+        <[uint32][Year][1952]>
         <[string8][Tags][ airplane glider gear trainer winch_hook tow_hook ]>
 		<[string8][Pilot][]>
     >

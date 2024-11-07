@@ -18,7 +18,7 @@
             <[sender][SenderMass][]
                 <[string8][Input][472.0]>
                 <[string8][Message][Aircraft.Mass]>
-            >			
+            >
 
             // cameras start
 
@@ -40,7 +40,7 @@
                 // <[tmvector3d][Direction][ 0.995 0.0 -0.12 ]>
                 // <[bool][InCockpit][true]>
                 // <[string8][Tags][ cockpit copilot rear ]>
-            // >			
+            // >
             <[camera][CameraGearView][]
                 <[string8][Body][Fuselage]>
                 <[tmvector3d][R0][ -4.735966 0.394402 0.104543 ]>
@@ -74,7 +74,7 @@
                 <[bool][InCockpit][false]>
                 <[string8][Tags][ fuselage wing right ]>
             >
-			
+
             // cameras end
 
 
@@ -537,7 +537,7 @@
             <[output][ServoHookOutput][]
                 <[string8][Input][ServoHook.Output]>
             >
-			
+
             // primary flight controls start
 
             // elevator
@@ -1251,7 +1251,7 @@
             >
             <[graphics_linear_interpolation][VsiNeedle1Mapping][]
                 <[string8][Input][VsiNeedle1Input.Output]>
-                <[tmvector2d][Map][(-9.84 -2.268928) (0 0.0) (9.84 2.268928)]>
+                <[tmvector2d][Map][(-5.0 -2.268928) (0 0.0) (5.0 2.268928)]>
             >
             <[hingedbodygraphics][VsiNeedle1]][]
                 <[string8][GeometryList][ VsiNeedle1 ]>
@@ -1278,13 +1278,13 @@
             >
             <[graphics_linear_interpolation][VsiNeedle2Mapping][]
                 <[string8][Input][VsiNeedle2Input.Output]>
-                <[tmvector2d][Map][(-59.055 -2.181662)
-									(-19.685 -1.396263)
-									(-9.8425 -0.907571)
-									(0 0.0)
-									(9.8425 0.959931)
-									(19.685 1.518436)
-									(59.055 2.356194)]>
+                <[tmvector2d][Map][(-30.0 -2.181662)
+									(-10.0 -1.396263)
+									(-5.0 -0.907571)
+									(0.0 0.0)
+									(5.0 0.959931)
+									(10.0 1.518436)
+									(30.0 2.356194)]>
             >
             <[hingedbodygraphics][VsiNeedle2][]
                 <[string8][GeometryList][ Vsi2Needle ]>
@@ -1498,7 +1498,7 @@
                 <[string8][SoundFile][winch_release.wav]>
                 <[tmvector3d][R0][ 2.1 0.186 0.290 ]>
                 <[bool][External][false]>
-            >			
+            >
 
             // buttons and switches
             <[soundinput][SwitchSound][]
