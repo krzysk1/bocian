@@ -1,16 +1,17 @@
 <[file][][]
     <[hints][][]
-        // ASK 21
-        <[float64][MaximumTakeOffMass][600.0]>
+        // SZD-9bis Bocian 1E
+        <[float64][MaximumTakeOffMass][540.0]>
         <[float64][WingSpan][17.0]>
         <[float64][WingArea][17.95]>
         <[float64][ApproachSpeed][27.77]>
         <[float64][PatternSpeed][33.3]>
         <[float64][InitialClimbSpeed][27.77]>
-        <[float64][GlideRatio][33.5]>
+        <[float64][GlideRatio][26.0]>
+        <[int][EngineCount][0]>		
         <[bool][GeneralAviation][true]>
         <[bool][Glider][true]>
-        <[bool][TailDragger][false]>
+        <[bool][TailDragger][true]>
         <[float64][PitchTrimTakeOff][0.1]>
         <[float64][PitchTrimWinch][0.1]>
         <[float64][PitchTrimTow][0.1]>

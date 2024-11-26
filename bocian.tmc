@@ -19,23 +19,22 @@
                 <[string8][Text][SZD-9 Bocian to dwumiejscowy szybowiec wielozadaniowy, który został zaprojektowany i zbudowany w Polsce w Szybowcowym Zakładzie Doświadczalnym w Bielsku-Białej, począwszy od 1952 roku. Zaprojektowano go tak, aby był w stanie zaspokoić potrzeby każdego obszaru, od szkolenia po latanie zawodnicze. Przerobiony z FlightGear przez Krzysztofa Kaniewskiego. Oryginalny model 3D stworzony przez AJ MacLeoda.]>
 			>
         >
-		<[float64][WingSpan][17.8]>
-		<[float64][MaximumAirspeed][54.0]>
-		<[float64][MaximumSpeed][54.0]>
-		<[float64][MinimumAirspeed][16.2]>
-        <[float64][ApproachAirspeed][33.3]>
-        <[float64][CruiseAirspeed][55.6]>
-        <[float64][CruiseSpeed][55.6]>
-		<[vector2_float64][NormalAirspeedRange][ 16.2 35.1 ]>
-		<[vector2_float64][CautionAirspeedRange][ 35.1 54.0 ]>
-		<[vector2_float64][FlapAirspeedRange][ 16.2 48.6 ]>
-        <[float64][MaximumAltitude][4715.0]>
-        <[float64][CruiseAltitude][1826.0]>
         <[float64][MaximumTakeoffMass][540.0]>
-        <[float64][MaximumGlideRatio][26.0]>
-        <[uint32][UnitsBuilt][615]>
-        <[uint32][EngineCount][0]>
-        <[uint32][Year][1952]>
+		<[float64][WingSpan]          [17.8]>
+        <[uint32] [EngineCount]       [0]>
+        <[uint32] [UnitsBuilt]        [615]>
+        <[uint32] [Year]              [1952]>
+		<[float64][MaximumAirspeed]   [54.0]>
+		<[float64][MaximumSpeed]      [54.0]>
+		<[float64][MinimumAirspeed]   [16.2]>
+        <[float64][ApproachAirspeed]  [33.3]>
+        <[float64][CruiseAirspeed]    [55.6]>
+        <[float64][CruiseSpeed]       [55.6]>
+        <[float64][MaximumGlideRatio] [26.0]>
+        <[float64][MaximumAltitude]   [4715.0]>
+        <[float64][CruiseAltitude]    [1826.0]>
+		<[vector2_float64][NormalAirspeedRange] [ 16.2 35.1 ]>
+		<[vector2_float64][CautionAirspeedRange][ 35.1 54.0 ]>
         <[string8][Tags][ airplane glider gear trainer winch_hook tow_hook ]>
 		<[string8][Pilot][]>
     >
