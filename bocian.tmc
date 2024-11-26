@@ -32,7 +32,6 @@
         <[float64][MaximumAltitude][4715.0]>
         <[float64][CruiseAltitude][1826.0]>
         <[float64][MaximumTakeoffMass][540.0]>
-        <[float64][MaximumRange][0.0]>
         <[float64][MaximumGlideRatio][26.0]>
         <[uint32][UnitsBuilt][615]>
         <[uint32][EngineCount][0]>

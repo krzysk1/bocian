@@ -149,6 +149,8 @@
                 <[string8][Body][LeftWing]>
                 <[string8][Geometry][WingPort]>
                 <[bool][NoCrash][true]>
+                <[float64][StaticFrictionCoefficient][0.7]>
+                <[float64][KineticFrictionCoefficient][1.4]>				
             >
             <[collisionhull][CollisionRightWing][]
                 <[float64][K][978000]>
@@ -156,6 +158,8 @@
                 <[string8][Body][RightWing]>
                 <[string8][Geometry][WingStbd]>
                 <[bool][NoCrash][true]>
+                <[float64][StaticFrictionCoefficient][0.7]>
+                <[float64][KineticFrictionCoefficient][1.4]>				
             >
 
             // main gear
