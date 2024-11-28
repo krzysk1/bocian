@@ -88,15 +88,15 @@
             >
 			// hook release
             <[control_box][HookRelease][11]
-                <[string8][Type][button]>
+                <[string8][Type][ lever toggle ]>
                 <[vector3_float64][R0][1.98 0.186 0.290]>
                 <[matrix3_float64][B0][ 1.0 0.0 0.0  0.0 1.0 0.0  0.0 0.0 1.0 ]>
                 <[vector3_float64][Direction][ 1.0 0.0 0.0 ]>
                 <[float64][StepDistance][0.01]>
-                <[control_message][OnPush][]
+                <[control_message][OnStep][]
                     <[string8][Message][Controls.HookRelease]>
-                    <[string8][Qualifiers][toggle]>
-                    <[float64][Value][1.0]>
+                    <[string8][Qualifiers][ step ]>
+                    <[float64][Value][-1.0]>
                 >
                 <[vector3_float64][Dimensions][0.016 0.045 0.016]>
             >			
