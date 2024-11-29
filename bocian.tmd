@@ -30,20 +30,20 @@
             <[camera_head][CameraPilot][]
                 <[string8][Tags][cockpit pilot front]>
                 <[string8][Body][Fuselage]>
-                <[tmvector3d][R0][1.5142 0 0.7187]>
+                <[tmvector3d][R0][1.45 0 0.67]>
                 <[tmvector3d][Direction][0.99 0.0 -0.2]>
                 <[bool][InCockpit][true]>
             >
             // <[camera_head][CameraCopilot][]
                 // <[string8][Body][Fuselage]>
-                // <[tmvector3d][R0][ 0.462 0.0 0.812 ]>
+                // <[tmvector3d][R0][ 0.46 0.0 0.79 ]>
                 // <[tmvector3d][Direction][ 0.995 0.0 -0.12 ]>
                 // <[bool][InCockpit][true]>
                 // <[string8][Tags][ cockpit copilot rear ]>
             // >
             <[camera][CameraGearView][]
                 <[string8][Body][Fuselage]>
-                <[tmvector3d][R0][ -4.735966 0.394402 0.104543 ]>
+                <[tmvector3d][R0][ -4.73 0.39 0.1 ]>
                 <[tmvector3d][Direction][ 1.0 0.0 0.0 ]>
                 <[bool][InCockpit][true]>
                 <[string8][Tags][ gear ]>
@@ -1472,7 +1472,7 @@
                 <[string8][InputTrigger][AirbrakePosition.Output]>
                 <[string8][InputPitch][1.0]>
                 <[string8][SoundFile][glider_airbrake_out.wav]>
-                <[float64][Threshold][0.01]>
+                <[float64][Threshold][0.05]>
                 <[uint32][Direction][1]>
                 <[bool][External][false]>
             >
@@ -1483,7 +1483,7 @@
                 <[string8][InputTrigger][AirbrakePosition.Output]>
                 <[string8][InputPitch][1.0]>
                 <[string8][SoundFile][glider_airbrake_in.wav]>
-                <[float64][Threshold][0.01]>
+                <[float64][Threshold][0.05]>
                 <[uint32][Direction][-1]>
                 <[bool][External][false]>
             >
