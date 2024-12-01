@@ -30,8 +30,12 @@
             <[camera_head][CameraPilot][]
                 <[string8][Tags][cockpit pilot front]>
                 <[string8][Body][Fuselage]>
-                <[tmvector3d][R0][1.45 0 0.67]>
+                <[tmvector3d][R0][1.49 0 0.67]>
                 <[tmvector3d][Direction][0.99 0.0 -0.2]>
+                <[float64][Kf][40.0]>
+                <[float64][Df][1.00]>
+                <[float64][Kt][0.04]>
+                <[float64][Dt][0.02]>
                 <[bool][InCockpit][true]>
             >
             // <[camera_head][CameraCopilot][]
