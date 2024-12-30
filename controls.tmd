@@ -1,14 +1,13 @@
 <[file][][]
     <[modelmanager][][]
         <[pointer_list_tmcontrol][ControlObjects][]
-           
-		
+           		
 			//barometer_setting
-            <[control_cylinder][PressureSetting][0] 
+            <[control_cylinder][PressureSetting][] 
                 <[string8][Type][knob]>
                 <[vector3_float64][R0][2.0602 -0.1833 0.335]>
-                <[matrix3_float64][B0][ 1.0  0 0   0.0  1.0  0.0   0.0  0.0  1.0  ]>
-                <[vector3_float64][Direction][1.0 0.0 0.0 ]>
+                <[matrix3_float64][B0][ 0.965926  0.000000 -0.258819   0.000000  1.000000  0.000000   0.258819  0.000000  0.965926  ]>
+                <[vector3_float64][Direction][0.965926 0.0 -0.258819]>
                 <[float64][StepAngle][0.1]>
                 <[control_message][OnRotate][]
                     <[string8][Message][Controls.PressureSetting0]>
@@ -19,22 +18,22 @@
                 <[float64][Length][0.015]>
             >
 			//Battery switch	
-            <[control_cylinder][MasterBattery][14]
+            <[control_cylinder][MasterBattery][]
                 <[string8][Type][switch toggle]>
                 <[vector3_float64][R0][2.09 0.091 0.4540]>
-                <[matrix3_float64][B0][ 1.0  0 0   0.0  1.0  0.0   0.0  0.0  1.0  ]>
-                <[vector3_float64][Direction][1.0 0.0 0.0 ]>
+                <[matrix3_float64][B0][ 0.965926  0.000000 -0.258819   0.000000  1.000000  0.000000   0.258819  0.000000  0.965926  ]>
+                <[vector3_float64][Direction][0.965926 0.0 -0.258819]>
                 <[float64][StepDistance][0.01]>
                 <[control_message][OnStep][]
                     <[string8][Message][Controls.MasterBattery]>
                     <[string8][Qualifiers][step]>
                     <[float64][Value][1.0]>
                 >
-                <[float64][Radius][0.012]>
+                <[float64][Radius][0.005]>
                 <[float64][Length][0.01]>
             >
 			//trim			
-            <[control_input][PitchTrimInput][2]
+            <[control_input][PitchTrimInput][]
                 <[uint32][InputID][PitchTrim.Output]>
             >
             <[control_sum][PitchTrimOffset][]
@@ -47,7 +46,7 @@
                 <[string8][Input][PitchTrimTravel.Output]>
                 <[vector3_float64][Axis][0.0186 -0.00085 -0.005]>
             >
-            <[control_cylinder][TrimSlider][1]
+            <[control_cylinder][TrimSlider][]
                 <[string8][Type][lever]>
                 <[vector3_float64][R0][1.666 0.2798 0.3833]>
                 <[matrix3_float64][B0][ 0.0 1.0 0.0  1.0 0.0 0.0  0.0 0.0 1.0 ]>
@@ -59,11 +58,11 @@
                     <[string8][Qualifiers][step]>
                     <[float64][Value][1.0]>
                 >
-                <[float64][Radius][0.011]>
-                <[float64][Length][0.006]>
+                <[float64][Radius][0.00597]>
+                <[float64][Length][0.02742]>
             >			
             // airbrake			
-            <[control_input][AirBrakeHandleInput][2]
+            <[control_input][AirBrakeHandleInput][]
                 <[uint32][InputID][ServoAirBrake.Output]>
                 <[float64][Scaling][0.523599]>				
             >
@@ -72,10 +71,10 @@
                 <[tmvector3d][Axis][0.0 -1.0 0.0]>
                 <[tmvector3d][Pivot][1.85301 0.226447 0.022628]> 
             >			
-            <[control_box][AirBrakeHandle][8]
+            <[control_cylinder][AirBrakeHandle][]
                 <[string8][Type][lever]>
                 <[vector3_float64][R0][2.01 0.218 0.1722]>
-                <[matrix3_float64][B0][ 1.0 0.0 0.0  0.0 1.0 0.0  0.0 0.0 1.0 ]>
+                <[matrix3_float64][B0][ 0.9064909  0.1466810  0.3959280   0.1466810  0.7699122 -0.6210635  -0.3959280  0.6210635  0.6764030 ]>
                 <[vector3_float64][Direction][ -1.0 0.0 0.0 ]>
                 <[float64][StepDistance][0.001]>
                 <[string8][InputTransform][AirBrakeHandleTransform.Output]>
@@ -84,13 +83,14 @@
                     <[string8][Qualifiers][step]>
                     <[float64][Value][0.03]>
                 >
-                <[vector3_float64][Dimensions][0.03 0.03 0.11]>
+                <[float64][Radius][0.0184]>
+                <[float64][Length][0.1072]>
             >
 			// hook release
-            <[control_box][HookRelease][11]
+            <[control_cylinder][HookRelease][]
                 <[string8][Type][ lever toggle ]>
-                <[vector3_float64][R0][1.98 0.186 0.290]>
-                <[matrix3_float64][B0][ 1.0 0.0 0.0  0.0 1.0 0.0  0.0 0.0 1.0 ]>
+                <[vector3_float64][R0][1.986 0.186 0.2907]>
+                <[matrix3_float64][B0][ 0.0 1.0 0.0  1.0 0.0 0.0  0.0 0.0 1.0 ]>
                 <[vector3_float64][Direction][ 1.0 0.0 0.0 ]>
                 <[float64][StepDistance][0.01]>
                 <[control_message][OnStep][]
@@ -98,7 +98,8 @@
                     <[string8][Qualifiers][ step ]>
                     <[float64][Value][-1.0]>
                 >
-                <[vector3_float64][Dimensions][0.016 0.045 0.016]>
+                <[float64][Radius][0.00807]>
+                <[float64][Length][0.04586]>
             >			
             // stick		
             <[control_input][ElevatorTravel][]
@@ -120,9 +121,9 @@
                 <[tmvector3d][Pivot][1.83967 0 0.025217]> 
                 <[string8][InputTransform][ElevatorTransform.Output]>
             >
-            <[control_cylinder][StickGrip][114]
+            <[control_cylinder][StickGrip][]
                 <[string8][Type][stick]>
-                <[vector3_float64][R0][1.844 0.0 0.2958]>
+                <[vector3_float64][R0][1.844 0.0 0.2944]>
                 <[matrix3_float64][B0][ 0.0  0.0  1.0  0.0  1.0  0.0 -1.0  0.0 0.0 ]>
                 <[vector3_float64][Direction][ 1.0  0.0 0.0 ]>
                 <[vector3_float64][Direction2][ 0.0 -1.0 0.0 ]>
@@ -138,8 +139,8 @@
                     <[string8][Qualifiers][step]>
                     <[float64][Value][7.0]>
                 >
-                <[float64][Radius][0.04]>
-                <[float64][Length][0.11]>
+                <[float64][Radius][0.0154]>
+                <[float64][Length][0.1026]>
             >		
         >
     >
