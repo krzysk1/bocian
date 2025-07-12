@@ -43,14 +43,14 @@
                 // <[tmvector3d][R0][ 0.46 0.0 0.79 ]>
                 // <[tmvector3d][Direction][ 0.995 0.0 -0.12 ]>
                 // <[bool][InCockpit][true]>
-                // <[string8][Tags][ cockpit copilot rear ]>
+                // <[string8][Tags][cockpit copilot rear]>
             // >
             <[camera][CameraGearView][]
                 <[string8][Body][Fuselage]>
                 <[tmvector3d][R0][ -4.73 0.39 0.1 ]>
                 <[tmvector3d][Direction][ 1.0 0.0 0.0 ]>
                 <[bool][InCockpit][true]>
-                <[string8][Tags][ gear ]>
+                <[string8][Tags][gear]>
             >
             <[camera][CameraStabilizer][]
                 <[string8][Body][Fuselage]>
@@ -58,7 +58,7 @@
                 <[tmvector3d][Direction][ 1.0 0.0 -0.2 ]>
                 <[float64][Cone][-0.2]>
                 <[bool][InCockpit][false]>
-                <[string8][Tags][ tail stabilizer ]>
+                <[string8][Tags][tail stabilizer]>
             >
             <[camera][CameraLeftFuselageView][]
                 <[string8][Body][LeftWing]>
@@ -67,7 +67,7 @@
                 <[tmvector3d][Direction][ 0.0 -1.0 -0.1 ]>
                 <[float64][Cone][0.0]>
                 <[bool][InCockpit][false]>
-                <[string8][Tags][ fuselage wing left ]>
+                <[string8][Tags][fuselage wing left]>
             >
             <[camera][CameraRightFuselageView][]
                 <[string8][Body][RightWing]>
@@ -76,7 +76,7 @@
                 <[tmvector3d][Direction][ 0.0 1.0 -0.1 ]>
                 <[float64][Cone][0.0]>
                 <[bool][InCockpit][false]>
-                <[string8][Tags][ fuselage wing right ]>
+                <[string8][Tags][fuselage wing right]>
             >
 
             // cameras end
