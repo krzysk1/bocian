@@ -15,6 +15,18 @@
                 <[string8][Text][Der PZL Bielsko SZD-9 Bocian ist ein zweisitziges polnisches Schulsegelflugzeug. Der Mitteldecker wurde in Holzbauweise hergestellt. Der Bocian ist für alle Arten der Segelflugausbildung einschließlich einfachem Kunstflug geeignet. Bis heute wird der SZD-9 Bocian in einigen Staaten noch zur Ausbildung eingesetzt, zum Beispiel in Polen und in Deutschland. Konvertiert von FlightGear durch Krzysztof Kaniewski. 3d-Modell erstellt von AJ MacLeod.]>
 			>
             <[localized_text][element][2]
+                <[string8u][Language][fr]>
+                <[string8][Text][Le SZD-9 Bocian est un planeur biplace polyvalent qui a été conçu et construit en Pologne à la Szybowcowy Zakład Doświadczalny (usine expérimentale de planeurs) à Bielsko-Biała, à partir de 1952. Il a été conçu pour répondre aux besoins de tous les domaines, de la formation au vol de compétition. Converti à partir de FlightGear par Krzysztof Kaniewski. Modèle 3D original créé par AJ MacLeod.]>
+			>
+            <[localized_text][element][3]
+                <[string8u][Language][es]>
+                <[string8][Text][El SZD-9 Bocian es un planeador biplaza polivalente que fue diseñado y construido en Polonia en Szybowcowy Zakład Doświadczalny (Fábrica Experimental de Planeadores) en Bielsko-Biała, a partir de 1952. Fue diseñado para satisfacer las necesidades de todas las áreas, desde el entrenamiento hasta las competiciones de vuelo. Convertido desde FlightGear por Krzysztof Kaniewski. Modelo 3D original creado por AJ MacLeod.]>
+			>
+            <[localized_text][element][4]
+                <[string8u][Language][it]>
+                <[string8][Text][L'SZD-9 Bocian è un aliante biposto multiuso progettato e costruito in Polonia presso lo Szybowcowy Zakład Doświadczalny (Glider Experimental Works) di Bielsko-Biała, a partire dal 1952. È stato progettato per soddisfare le esigenze di ogni settore, dall'addestramento alle competizioni di volo. Convertito da FlightGear da Krzysztof Kaniewski. Modello 3D originale creato da AJ MacLeod.]>
+			>
+            <[localized_text][element][5]
                 <[string8u][Language][pl]>
                 <[string8][Text][SZD-9 Bocian to dwumiejscowy szybowiec wielozadaniowy, który został zaprojektowany i zbudowany w Polsce w Szybowcowym Zakładzie Doświadczalnym w Bielsku-Białej, począwszy od 1952 roku. Zaprojektowano go tak, aby był w stanie zaspokoić potrzeby każdego obszaru, od szkolenia po latanie zawodnicze. Przerobiony z FlightGear przez Krzysztofa Kaniewskiego. Oryginalny model 3D stworzony przez AJ MacLeoda.]>
 			>
@@ -33,6 +45,7 @@
         <[float64][MaximumGlideRatio] [26.0]>
         <[float64][MaximumAltitude]   [4715.0]>
         <[float64][CruiseAltitude]    [1826.0]>
+        <[vector2_float64][FlapAirspeedRange]   [  0.0  0.0 ]>
 		<[vector2_float64][NormalAirspeedRange] [ 16.2 35.1 ]>
 		<[vector2_float64][CautionAirspeedRange][ 35.1 54.0 ]>
         <[string8][Tags][ airplane glider gear trainer winch_hook tow_hook ]>
