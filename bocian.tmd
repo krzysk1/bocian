@@ -924,7 +924,7 @@
                 <[uint32][OrientationID][RightWing.Q]>
             >
             <[rigidbodygraphics][Glass][]
-                <[string8][GeometryList][ CanopygFront CanopygRear CanopygRearInt CanopygFrontInt ]>
+                <[string8][GeometryList][ CanopygFront CanopygRear CanopygRearInt CanopygFrontInt GaugeGlass ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
             >

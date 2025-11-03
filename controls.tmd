@@ -42,7 +42,7 @@
             <[control_product][PitchTrimTravel][]
                 <[uint32][Inputs][PitchTrimOffset.Output 1.0]>
             >
-            <[control_translation][PitchTrimTranslation][2]
+            <[control_translation][PitchTrimTranslation][]
                 <[string8][Input][PitchTrimTravel.Output]>
                 <[vector3_float64][Axis][0.0186 -0.00085 -0.005]>
             >
