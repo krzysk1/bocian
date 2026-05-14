@@ -84,7 +84,7 @@
             <[rigidbody][Fuselage][]
                 <[float64][Mass][233.6]>
                 <[tmvector3d][InertiaLength][5.37 0.7282 1.210100]>
-                <[tmvector3d][R0][-0.685 0 0.35]>
+                <[tmvector3d][R0][-0.05 0 0.3]>
                 <[tmmatrix3d][B0][1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0]>
             >
             <[rigidbody][LeftWing][]
@@ -235,7 +235,7 @@
                 <[float64][Mass][63.0]>
                 <[string8][Body][Fuselage]>
                 <[tmvector3d][InertiaLength][ 0.5 0.5 0.5 ]>
-                <[tmvector3d][R0][1.75 0 0.3]>
+                <[tmvector3d][R0][1.6 0 0.3]>
                 <[tmmatrix3d][B0][1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0]>
                 <[float64][MinimumPersons][1.0]>
                 <[float64][MaximumPersons][1.0]>
@@ -244,7 +244,7 @@
                 <[float64][Mass][70.0]>
                 <[string8][Body][Fuselage]>
                 <[tmvector3d][InertiaLength][ 0.5 0.5 0.5 ]>
-                <[tmvector3d][R0][1.04 0 0.4]>
+                <[tmvector3d][R0][0.65 0 0.4]>
                 <[tmmatrix3d][B0][1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0]>
                 <[float64][MinimumPersons][0.0]>
                 <[float64][MaximumPersons][1.0]>
@@ -414,10 +414,10 @@
                 <[float64][Area][1.233840]>
                 <[string8][Flap0Control][ServoElevator.Output]>
                 <[float64array][StationY]           [ 0.0005 0.0925 1.8263 1.8883 ]>
-                <[float64array][StationLE]          [-3.4593 -3.4592 -3.4646 -3.4669]>
-                <[float64array][StationTE]          [-4.4158 -4.3981 -3.9554 -3.9322]>
-                <[float64array][StationZ]           [0.581 0.581 0.581 0.581]>
-                <[float64array][StationIncidence]   [ 0.087266 0.087266 0.087266 0.087266 ]>
+                <[float64array][StationLE]          [ -3.4593 -3.4592 -3.4646 -3.4669]>
+                <[float64array][StationTE]          [ -4.4158 -4.3981 -3.9554 -3.9322]>
+                <[float64array][StationZ]           [ 0.581 0.581 0.581 0.581]>
+                <[float64array][StationIncidence]   [ 0.0 0.0 0.0 0.0 ]>
                 <[uint32array][StationFlap]         [ 0 1 0 0 ]>
                 <[float64array][StationFlapFraction][ 0.00 0.66 0.00 0.00 ]>
                 <[float64][AspectRatioMultiplier][2]>
@@ -433,11 +433,11 @@
                 <[float64][Span][1.94]>
                 <[float64][Area][1.233840]>
                 <[string8][Flap0Control][ServoElevator.Output]>
-                <[float64array][StationY]           [ -1.8883 -1.8263 0.0925 -0.0005 ]>
-                <[float64array][StationLE]          [-3.4669 -3.4646 -3.4592 -3.4593]>
-                <[float64array][StationTE]          [-3.9322 -3.9554 -4.3981 -4.4158]>
-                <[float64array][StationZ]           [0.581 0.581 0.581 0.581]>
-                <[float64array][StationIncidence]   [ 0.087266 0.087266 0.087266 0.087266 ]>
+                <[float64array][StationY]           [ -1.8883 -1.8263 -0.0925 -0.0005 ]>
+                <[float64array][StationLE]          [ -3.4669 -3.4646 -3.4592 -3.4593]>
+                <[float64array][StationTE]          [ -3.9322 -3.9554 -4.3981 -4.4158]>
+                <[float64array][StationZ]           [ 0.581 0.581 0.581 0.581]>
+                <[float64array][StationIncidence]   [ 0.0 0.0 0.0 0.0 ]>
                 <[uint32array][StationFlap]         [ 0 1 0 0 ]>
                 <[float64array][StationFlapFraction][ 0.00 0.66 0.00 0.00 ]>
                 <[float64][AspectRatioMultiplier][2]>
@@ -454,9 +454,9 @@
                 <[float64][Area][1.748229]>
                 <[string8][Flap0Control][ServoRudder.Output]>
                 <[float64array][StationY]           [ 0.0 0.0 0.0 ]>
-                <[float64array][StationLE]          [-4.4631 -3.753356 -4.1158]>
-                <[float64array][StationTE]          [-4.4631 -5.2934 -4.8157]>
-                <[float64array][StationZ]           [0.0663 0.203 1.8212]>
+                <[float64array][StationLE]          [ -4.4631 -3.753356 -4.1158]>
+                <[float64array][StationTE]          [ -4.4631 -5.2934 -4.8157]>
+                <[float64array][StationZ]           [ 0.0663 0.203 1.8212]>
                 <[float64array][StationIncidence]   [ 0.0 0.0 0.0 ]>
                 <[uint32array][StationFlap]         [ 1 1 0 ]>
                 <[float64array][StationFlapFraction][ 0.5 0.5 0.0 ]>
@@ -770,11 +770,8 @@
             >
 
             // altitude
-            <[input_default][PressureSetting][]
+            <[input_pressure_setting][PressureSetting][]
                 <[string8][Message][Controls.PressureSetting0]>
-                <[uint][Positions][201]>
-                <[tmvector2d][Range][ 95000.0 105000.0 ]>
-                <[float64][Value][101325.0]>
             >
             <[output_free][PressureSettingOutput][]
                 <[string8][Input][PressureSetting.Output]>
