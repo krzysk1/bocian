@@ -534,7 +534,7 @@
                 <[float64array][InputPosition][ 0.0 1.0 ]>
                 <[float64array][OutputPosition][ 0.0 1.0 ]>
             >
-            <[output][ServoHookOutput][]
+            <[output_free][ServoHookOutput][]
                 <[string8][Input][ServoHook.Output]>
             >
 
@@ -832,7 +832,7 @@
                 <[string8][Input][Accelerometer.Acceleration]>
             >
 
-            // Turn coordinator
+            // turn coordinator
             <[turn_coordinator][TurnCoordinator][]
                 <[string8][Body][Fuselage]>
             >
@@ -892,7 +892,23 @@
                 <[string8][Input][HeadingIndicator.MagneticHeading]>
             >
 
+            // battery master switch
+            <[input_switch][MasterBatterySwitch][]
+                <[string8][Message][Controls.MasterBattery]>
+                <[string8][Events]       [ SwitchSound.Trigger ]>
+                <[string8][EventsRelease][ SwitchSound.Trigger ]>
+                <[float64][Value][1.0]>
+            >
+			// push to talk buttons
+            <[input_button][PushToTalkButton][]
+                <[string8][Message][Communication.PushToTalk]>
+                <[string8][Events]       [ SwitchSound.Trigger ]>
+                <[string8][EventsRelease][ SwitchSound.Trigger ]>
+            >
+
             // navigation instruments end
+            <[event_sound][SwitchSound][]
+            >			
 
         >
         <[pointer_list_tmgraphics][GraphicObjects][]
@@ -1075,7 +1091,7 @@
                 <[string8][GeometryList][ Cylinder31114 Cylinder32159 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][InputID][ServoHookOutput.Output]>
+                <[uint32][InputID][ServoHook.Output]>
                 <[tmvector3d][Axis][-0.030 0.0 0.0]>
             >
 
@@ -1250,7 +1266,7 @@
                 <[string8][Input][VsiNeedle1Input.Output]>
                 <[tmvector2d][Map][(-5.0 -2.268928) (0 0.0) (5.0 2.268928)]>
             >
-            <[hingedbodygraphics][VsiNeedle1]][]
+            <[hingedbodygraphics][VsiNeedle1][]
                 <[string8][GeometryList][ VsiNeedle1 ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
